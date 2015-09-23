@@ -1,0 +1,155 @@
+mysql> SELECT AddressBook.name, Entry.firstName FROM Entry JOIN AddressBook ON AddressBook.accountId = Entry.addressBookId WHERE AddressBook.name = "Pharetra Ut Limited";                                                                
++---------------------+-----------+
+| name                | firstName |
++---------------------+-----------+
+| Pharetra Ut Limited | Justine   |
+| Pharetra Ut Limited | Tanek     |
+| Pharetra Ut Limited | Kaye      |
+| Pharetra Ut Limited | Kirk      |
+| Pharetra Ut Limited | Zachery   |
+| Pharetra Ut Limited | Kay       |
+| Pharetra Ut Limited | Roary     |
+| Pharetra Ut Limited | Iola      |
+| Pharetra Ut Limited | Kimberley |
+| Pharetra Ut Limited | Jerry     |
+| Pharetra Ut Limited | Paula     |
+| Pharetra Ut Limited | Hayes     |
+| Pharetra Ut Limited | Charlotte |
+| Pharetra Ut Limited | Kevyn     |
+| Pharetra Ut Limited | Dacey     |
+| Pharetra Ut Limited | Ivory     |
+| Pharetra Ut Limited | Kirby     |
+| Pharetra Ut Limited | Paloma    |
+| Pharetra Ut Limited | Colette   |
+| Pharetra Ut Limited | Shad      |
+| Pharetra Ut Limited | Ezekiel   |
+| Pharetra Ut Limited | Eagan     |
+| Pharetra Ut Limited | Joan      |
+| Pharetra Ut Limited | Randall   |
+| Pharetra Ut Limited | Christen  |
+| Pharetra Ut Limited | Bianca    |
+| Pharetra Ut Limited | Tyler     |
+| Pharetra Ut Limited | Forrest   |
+| Pharetra Ut Limited | Ann       |
+| Pharetra Ut Limited | Patricia  |
+| Pharetra Ut Limited | Grace     |
+| Pharetra Ut Limited | Boris     |
+| Pharetra Ut Limited | Jaquelyn  |
+| Pharetra Ut Limited | Kai       |
+| Pharetra Ut Limited | TaShya    |
+| Pharetra Ut Limited | Xena      |
+| Pharetra Ut Limited | Naida     |
+| Pharetra Ut Limited | Rhoda     |
+| Pharetra Ut Limited | Ciaran    |
+| Pharetra Ut Limited | Jared     |
+| Pharetra Ut Limited | Raphael   |
+| Pharetra Ut Limited | Marshall  |
+| Pharetra Ut Limited | Jaden     |
+| Pharetra Ut Limited | Orla      |
+| Pharetra Ut Limited | Blaine    |
+| Pharetra Ut Limited | Christian |
+| Pharetra Ut Limited | Shoshana  |
+| Pharetra Ut Limited | Keith     |
+| Pharetra Ut Limited | Sawyer    |
+| Pharetra Ut Limited | Martin    |
+| Pharetra Ut Limited | Angelica  |
+| Pharetra Ut Limited | Sigourney |
+| Pharetra Ut Limited | Tatiana   |
+| Pharetra Ut Limited | Mercedes  |
+| Pharetra Ut Limited | Eugenia   |
+| Pharetra Ut Limited | Xandra    |
+| Pharetra Ut Limited | Brendan   |
+| Pharetra Ut Limited | Zeus      |
+| Pharetra Ut Limited | Brandon   |
+| Pharetra Ut Limited | Brooke    |
+| Pharetra Ut Limited | Celeste   |
+| Pharetra Ut Limited | Alice     |
+| Pharetra Ut Limited | Samuel    |
+| Pharetra Ut Limited | Irene     |
++---------------------+-----------+
+64 rows in set (0.00 sec)
+
+SELECT AddressBook.name, Entry.firstName FROM Entry JOIN AddressBook ON AddressBook.accountId = Entry.addressBookId WHERE AddressBook.name = "Pharetra Ut Limited";
+
+SELECT AddressBook.name,
+CONCAT(
+UPPER (SUBSTRING((Entry.firstName), 1, 1)),
+LOWER (SUBSTRING((Entry.firstName), 2, LENGTH(Entry.firstName)-1)),
+UPPER (SUBSTRING((Entry.firstName), LENGTH(Entry.firstName))) ) AS names
+FROM Entry JOIN AddressBook ON AddressBook.accountId = Entry.addressBookId WHERE AddressBook.name = "Pharetra Ut Limited";
+
+mysql> SELECT AddressBook.name,
+    -> CONCAT(
+    -> UPPER (SUBSTRING((Entry.firstName), 1, 1)),
+    -> LOWER (SUBSTRING((Entry.firstName), 2, LENGTH(Entry.firstName)-1)),
+    -> UPPER (SUBSTRING((Entry.firstName), LENGTH(Entry.firstName))) ) AS names
+    -> FROM Entry JOIN AddressBook ON AddressBook.accountId = Entry.addressBookId WHERE AddressBook.name = "Pharetra Ut Limited";
++---------------------+------------+
+| name                | names      |
++---------------------+------------+
+| Pharetra Ut Limited | JustineE   |
+| Pharetra Ut Limited | TanekK     |
+| Pharetra Ut Limited | KayeE      |
+| Pharetra Ut Limited | KirkK      |
+| Pharetra Ut Limited | ZacheryY   |
+| Pharetra Ut Limited | KayY       |
+| Pharetra Ut Limited | RoaryY     |
+| Pharetra Ut Limited | IolaA      |
+| Pharetra Ut Limited | KimberleyY |
+| Pharetra Ut Limited | JerryY     |
+| Pharetra Ut Limited | PaulaA     |
+| Pharetra Ut Limited | HayesS     |
+| Pharetra Ut Limited | CharlotteE |
+| Pharetra Ut Limited | KevynN     |
+| Pharetra Ut Limited | DaceyY     |
+| Pharetra Ut Limited | IvoryY     |
+| Pharetra Ut Limited | KirbyY     |
+| Pharetra Ut Limited | PalomaA    |
+| Pharetra Ut Limited | ColetteE   |
+| Pharetra Ut Limited | ShadD      |
+| Pharetra Ut Limited | EzekielL   |
+| Pharetra Ut Limited | EaganN     |
+| Pharetra Ut Limited | JoanN      |
+| Pharetra Ut Limited | RandallL   |
+| Pharetra Ut Limited | ChristenN  |
+| Pharetra Ut Limited | BiancaA    |
+| Pharetra Ut Limited | TylerR     |
+| Pharetra Ut Limited | ForrestT   |
+| Pharetra Ut Limited | AnnN       |
+| Pharetra Ut Limited | PatriciaA  |
+| Pharetra Ut Limited | GraceE     |
+| Pharetra Ut Limited | BorisS     |
+| Pharetra Ut Limited | JaquelynN  |
+| Pharetra Ut Limited | KaiI       |
+| Pharetra Ut Limited | TashyaA    |
+| Pharetra Ut Limited | XenaA      |
+| Pharetra Ut Limited | NaidaA     |
+| Pharetra Ut Limited | RhodaA     |
+| Pharetra Ut Limited | CiaranN    |
+| Pharetra Ut Limited | JaredD     |
+| Pharetra Ut Limited | RaphaelL   |
+| Pharetra Ut Limited | MarshallL  |
+| Pharetra Ut Limited | JadenN     |
+| Pharetra Ut Limited | OrlaA      |
+| Pharetra Ut Limited | BlaineE    |
+| Pharetra Ut Limited | ChristianN |
+| Pharetra Ut Limited | ShoshanaA  |
+| Pharetra Ut Limited | KeithH     |
+| Pharetra Ut Limited | SawyerR    |
+| Pharetra Ut Limited | MartinN    |
+| Pharetra Ut Limited | AngelicaA  |
+| Pharetra Ut Limited | SigourneyY |
+| Pharetra Ut Limited | TatianaA   |
+| Pharetra Ut Limited | MercedesS  |
+| Pharetra Ut Limited | EugeniaA   |
+| Pharetra Ut Limited | XandraA    |
+| Pharetra Ut Limited | BrendanN   |
+| Pharetra Ut Limited | ZeusS      |
+| Pharetra Ut Limited | BrandonN   |
+| Pharetra Ut Limited | BrookeE    |
+| Pharetra Ut Limited | CelesteE   |
+| Pharetra Ut Limited | AliceE     |
+| Pharetra Ut Limited | SamuelL    |
+| Pharetra Ut Limited | IreneE     |
++---------------------+------------+
+64 rows in set (0.00 sec)
