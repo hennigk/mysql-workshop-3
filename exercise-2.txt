@@ -1,0 +1,26 @@
+SOURCE data/import-entry.sql;
+
+SOURCE data/import-account.sql;
+
+SOURCE data/import-addressbook.sql;
+
+mysql> SELECT COUNT(*) FROM Entry;
++----------+
+| COUNT(*) |
++----------+
+|     6100 |
++----------+
+
+mysql> SELECT COUNT(*) FROM Account;
++----------+
+| COUNT(*) |
++----------+
+|     1000 |
++----------+
+
+mysql> SELECT COUNT(*) FROM AddressBook;
++----------+
+| COUNT(*) |
++----------+
+|     1100 |
++----------+
