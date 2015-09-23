@@ -1,0 +1,14 @@
+SELECT Entry.firstName, Entry.lastName, Phone.content FROM Entry
+JOIN Phone ON Phone.entryId = Entry.id
+WHERE Entry.firstName = "Charlotte" AND Entry.lastName = "Jenkins";
+
+mysql> SELECT Entry.firstName, Entry.lastName, Phone.content FROM Entry
+    -> JOIN Phone ON Phone.entryId = Entry.id
+    -> WHERE Entry.firstName = "Charlotte" AND Entry.lastName = "Jenkins";
++-----------+----------+----------------+
+| firstName | lastName | content        |
++-----------+----------+----------------+
+| Charlotte | Jenkins  | (110) 167-3420 |
+| Charlotte | Jenkins  | (605) 175-1334 |
++-----------+----------+----------------+
+2 rows in set (0.00 sec)
