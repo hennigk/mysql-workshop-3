@@ -1,0 +1,138 @@
+mysql> SHOW DATABASES;
++--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| c9                 |
+| mysql              |
+| performance_schema |
++--------------------+
+
+mysql> CREATE DATABASE decodemtl_addressbook;
+
+mysql> USE decodemtl_addressbook;
+
+mysql> CREATE TABLE Account (
+    -> id int NOT NULL AUTO_INCREMENT,
+    -> PRIMARY KEY(id)
+    -> );
+
+mysql> SHOW TABLES;
++---------------------------------+
+| Tables_in_decodemtl_addressbook |
++---------------------------------+
+| Account                         |
++---------------------------------+
+
+mysql> ALTER TABLE Account ADD COLUMN email VARCHAR(255) NOT NULL;
+
+mysql> ALTER TABLE Account ADD COLUMN password VARCHAR(40) NOT NULL; 
+
+mysql> ALTER TABLE Account ADD COLUMN createdOn DATETIME  NOT NULL;  
+
+mysql> ALTER TABLE Account ADD COLUMN modifiedOn DATETIME;
+
+mysql> DESCRIBE Account;
++------------+--------------+------+-----+---------+----------------+
+| Field      | Type         | Null | Key | Default | Extra          |
++------------+--------------+------+-----+---------+----------------+
+| id         | int(11)      | NO   | PRI | NULL    | auto_increment |
+| email      | varchar(255) | NO   |     | NULL    |                |
+| password   | varchar(40)  | NO   |     | NULL    |                |
+| createdOn  | datetime     | NO   |     | NULL    |                |
+| modifiedOn | datetime     | YES  |     | NULL    |                |
++------------+--------------+------+-----+---------+----------------+
+
+mysql> CREATE TABLE AddressBook (
+    -> id int NOT NULL AUTO_INCREMENT,                                       
+    -> PRIMARY KEY(id)
+    -> ); 
+
+mysql> SOURCE schema/addressbook.sql;
+
+mysql> SHOW TABLES;
++---------------------------------+
+| Tables_in_decodemtl_addressbook |
++---------------------------------+
+| Account                         |
+| Address                         |
+| AddressBook                     |
+| ElectronicMail                  |
+| Entry                           |
+| Phone                           |
++---------------------------------+
+
+mysql> DESCRIBE Account;
++------------+--------------+------+-----+---------+----------------+
+| Field      | Type         | Null | Key | Default | Extra          |
++------------+--------------+------+-----+---------+----------------+
+| id         | int(11)      | NO   | PRI | NULL    | auto_increment |
+| email      | varchar(255) | NO   | UNI | NULL    |                |
+| password   | varchar(40)  | NO   |     | NULL    |                |
+| createdOn  | datetime     | NO   |     | NULL    |                |
+| modifiedOn | datetime     | YES  |     | NULL    |                |
++------------+--------------+------+-----+---------+----------------+
+
+mysql> DESCRIBE Address;
++--------------+-----------------------------+------+-----+---------+----------------+
+| Field        | Type                        | Null | Key | Default | Extra          |
++--------------+-----------------------------+------+-----+---------+----------------+
+| id           | int(11)                     | NO   | PRI | NULL    | auto_increment |
+| entryId      | int(11)                     | NO   | MUL | NULL    |                |
+| type         | enum('home','work','other') | NO   |     | NULL    |                |
+| addressLine1 | varchar(255)                | NO   |     | NULL    |                |
+| addressLine2 | varchar(255)                | YES  |     | NULL    |                |
+| city         | varchar(255)                | NO   |     | NULL    |                |
+| province     | varchar(128)                | NO   | MUL | NULL    |                |
+| country      | varchar(128)                | NO   | MUL | NULL    |                |
+| postalCode   | varchar(10)                 | NO   |     | NULL    |                |
++--------------+-----------------------------+------+-----+---------+----------------+
+
+
+mysql> DESCRIBE Entry;
++---------------+-------------------------------------------+------+-----+---------+----------------+
+| Field         | Type                                      | Null | Key | Default | Extra          |
++---------------+-------------------------------------------+------+-----+---------+----------------+
+| id            | int(11)                                   | NO   | PRI | NULL    | auto_increment |
+| addressBookId | int(11)                                   | NO   | MUL | NULL    |                |
+| firstName     | varchar(255)                              | NO   |     | NULL    |                |
+| lastName      | varchar(255)                              | YES  |     | NULL    |                |
+| birthday      | datetime                                  | YES  |     | NULL    |                |
+| type          | enum('phone','address','electronic-mail') | NO   |     | NULL    |                |
++---------------+-------------------------------------------+------+-----+---------+----------------+
+
+mysql> DESCRIBE Phone;
++---------+-----------------------------------+------+-----+---------+----------------+
+| Field   | Type                              | Null | Key | Default | Extra          |
++---------+-----------------------------------+------+-----+---------+----------------+
+| id      | int(11)                           | NO   | PRI | NULL    | auto_increment |
+| entryId | int(11)                           | NO   | MUL | NULL    |                |
+| type    | enum('home','work','other')       | NO   |     | NULL    |                |
+| subtype | enum('landline','cellular','fax') | NO   | MUL | NULL    |                |
+| content | varchar(255)                      | NO   |     | NULL    |                |
++---------+-----------------------------------+------+-----+---------+----------------+
+
+mysql> DESCRIBE Address;
++--------------+-----------------------------+------+-----+---------+----------------+
+| Field        | Type                        | Null | Key | Default | Extra          |
++--------------+-----------------------------+------+-----+---------+----------------+
+| id           | int(11)                     | NO   | PRI | NULL    | auto_increment |
+| entryId      | int(11)                     | NO   | MUL | NULL    |                |
+| type         | enum('home','work','other') | NO   |     | NULL    |                |
+| addressLine1 | varchar(255)                | NO   |     | NULL    |                |
+| addressLine2 | varchar(255)                | YES  |     | NULL    |                |
+| city         | varchar(255)                | NO   |     | NULL    |                |
+| province     | varchar(128)                | NO   | MUL | NULL    |                |
+| country      | varchar(128)                | NO   | MUL | NULL    |                |
+| postalCode   | varchar(10)                 | NO   |     | NULL    |                |
++--------------+-----------------------------+------+-----+---------+----------------+
+
+mysql> DESCRIBE ElectronicMail;
++---------+-----------------------------+------+-----+---------+----------------+
+| Field   | Type                        | Null | Key | Default | Extra          |
++---------+-----------------------------+------+-----+---------+----------------+
+| id      | int(11)                     | NO   | PRI | NULL    | auto_increment |
+| entryId | int(11)                     | NO   | MUL | NULL    |                |
+| type    | enum('home','work','other') | NO   |     | NULL    |                |
+| content | varchar(255)                | NO   |     | NULL    |                |
++---------+-----------------------------+------+-----+---------+----------------+
