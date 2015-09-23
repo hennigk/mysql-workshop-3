@@ -1,0 +1,28 @@
+SELECT ElectronicMail.content, AddressBook.name, AddressBook.id FROM Entry
+JOIN ElectronicMail ON ElectronicMail.entryId = Entry.id
+JOIN AddressBook ON AddressBook.id = Entry.addressBookId
+WHERE AddressBook.id = 100;
+
+mysql> SELECT ElectronicMail.content, AddressBook.name, AddressBook.id FROM Entry
+    -> JOIN ElectronicMail ON ElectronicMail.entryId = Entry.id
+    -> JOIN AddressBook ON AddressBook.id = Entry.addressBookId
+    -> WHERE AddressBook.id = 100;
++--------------------------------------------+----------------+-----+
+| content                                    | name           | id  |
++--------------------------------------------+----------------+-----+
+| Nam.tempor@nisimagna.co.uk                 | Sem Industries | 100 |
+| vitae.diam@sapienAeneanmassa.com           | Sem Industries | 100 |
+| cursus.vestibulum@pellentesqueSeddictum.ca | Sem Industries | 100 |
+| velit@vestibulum.co.uk                     | Sem Industries | 100 |
+| tincidunt.congue.turpis@Inmi.net           | Sem Industries | 100 |
+| nibh.Donec.est@nibh.org                    | Sem Industries | 100 |
+| malesuada.fames.ac@Sedeu.co.uk             | Sem Industries | 100 |
+| tortor.dictum@Nulla.org                    | Sem Industries | 100 |
+| mauris.blandit.mattis@Integersemelit.net   | Sem Industries | 100 |
+| Nunc.ac@parturientmontesnascetur.com       | Sem Industries | 100 |
+| vulputate.posuere.vulputate@liberoDonec.ca | Sem Industries | 100 |
+| massa.Quisque.porttitor@enimSednulla.edu   | Sem Industries | 100 |
+| eget@viverraMaecenasiaculis.net            | Sem Industries | 100 |
+| eu.tellus@ipsum.co.uk                      | Sem Industries | 100 |
++--------------------------------------------+----------------+-----+
+14 rows in set (0.00 sec)
