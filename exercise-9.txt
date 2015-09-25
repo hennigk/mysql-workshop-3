@@ -1,66 +1,74 @@
-+----------------+-------------------------------------------------------+----------+
-| content        | email                                                 | COUNT(*) |
-+----------------+-------------------------------------------------------+----------+
-| 1-830-179-3094 | Donec.vitae@Phasellusornare.org                       |        1 |
-| 1-355-658-9356 | Duis.ac.arcu@ascelerisque.co.uk                       |        2 |
-| 1-781-983-4034 | Morbi.neque@erat.org                                  |        3 |
-| 1-579-683-7011 | Nam.consequat.dolor@nondapibusrutrum.ca               |        8 |
-| 1-100-591-6153 | Nunc.pulvinar.arcu@vel.ca                             |        2 |
-| 1-831-382-0649 | Phasellus.vitae@diamat.com                            |        2 |
-| 1-230-221-1403 | Praesent@miDuis.net                                   |        3 |
-| 1-516-476-2302 | Proin.nisl@arcuMorbisit.net                           |        5 |
-| 1-581-724-8616 | Quisque@Donec.net                                     |        3 |
-| 1-164-741-1817 | Suspendisse.non@nullavulputatedui.ca                  |        6 |
-| 1-877-158-1811 | Ut.sagittis.lobortis@semperduilectus.net              |        2 |
-| 1-507-991-8513 | Vestibulum.ante.ipsum@egestasblanditNam.net           |        3 |
-| 1-200-560-7225 | Vivamus.euismod.urna@anteNunc.net                     |       10 |
-| 1-742-993-2400 | Vivamus.molestie@Infaucibus.org                       |        4 |
-| 1-153-744-4476 | adipiscing.fringilla.porttitor@Quisqueac.edu          |        1 |
-| 1-130-457-3860 | adipiscing@Sedetlibero.ca                             |        8 |
-| 1-534-780-0705 | ante@nulla.edu                                        |        1 |
-| 1-778-730-0178 | aptent@nequesedsem.edu                                |        2 |
-| 1-835-432-1108 | bibendum@orciUtsemper.com                             |        1 |
-| 1-254-219-1949 | blandit@nec.com                                       |        5 |
-| 1-707-888-2787 | commodo@tincidunt.co.uk                               |        6 |
-| 1-712-873-5099 | consectetuer.rhoncus.Nullam@temporloremeget.org       |        9 |
-| 1-687-372-5982 | consectetuer.rhoncus@pedeacurna.net                   |        1 |
-| 1-795-477-6585 | dapibus.quam@interdumligulaeu.ca                      |        1 |
-| 1-217-683-0322 | diam.luctus.lobortis@ipsumac.ca                       |        2 |
-| 1-585-936-6793 | dignissim.lacus@vel.ca                                |        2 |
-| 1-826-300-6188 | egestas.Fusce.aliquet@nec.edu                         |        3 |
-| 1-213-934-5487 | est.ac@etmalesuadafames.ca                            |        3 |
-| 1-854-220-8547 | et.ipsum.cursus@euaugue.com                           |        4 |
-| 1-413-597-6316 | eu.metus@atlibero.co.uk                               |        1 |
-| 1-340-435-0028 | eu@Crasvulputatevelit.com                             |        3 |
-| 1-351-618-2388 | facilisis.non@vulputateullamcorpermagna.ca            |        3 |
-| 1-512-707-6897 | iaculis.nec@magnaCrasconvallis.co.uk                  |        4 |
-| 1-425-733-8123 | inceptos@dictummagna.org                              |        8 |
-| 1-257-867-0566 | ipsum.Donec@tellus.ca                                 |        4 |
-| 1-200-915-5809 | ipsum.non@Nullaeu.net                                 |        1 |
-| 1-258-765-9937 | leo@temporloremeget.co.uk                             |        5 |
-| 1-391-754-0615 | libero.lacus.varius@gravidaAliquamtincidunt.com       |        1 |
-| 1-440-731-0304 | lobortis@elementumpurus.co.uk                         |        3 |
-| 1-206-495-1425 | lorem@apurusDuis.edu                                  |        2 |
-| 1-649-149-4033 | magna.Praesent@Lorem.ca                               |        2 |
-| 1-230-850-6706 | magna.Sed.eu@duiSuspendisseac.edu                     |        1 |
-| 1-156-757-3429 | mauris@placeratCrasdictum.net                         |        2 |
-| 1-653-553-6385 | natoque@perinceptoshymenaeos.net                      |        7 |
-| 1-716-957-3905 | nec.ligula@sedtortorInteger.com                       |        1 |
-| 1-811-990-2618 | neque.vitae@enimcommodohendrerit.net                  |        4 |
-| 1-765-240-6001 | non.justo.Proin@variuset.edu                          |        1 |
-| 1-433-115-6363 | non@eget.com                                          |        2 |
-| 1-941-735-6014 | nulla.vulputate@Nullamscelerisque.co.uk               |        2 |
-| 1-569-464-7758 | orci.consectetuer.euismod@lacinia.com                 |        1 |
-| 1-588-524-1323 | porta@Vivamus.com                                     |        2 |
-| 1-587-303-6203 | quam.dignissim.pharetra@sed.co.uk                     |        5 |
-| 1-665-685-5382 | ridiculus.mus@euismod.net                             |        7 |
-| 1-873-432-9306 | semper.egestas.urna@ipsumSuspendissesagittis.ca       |        2 |
-| 1-494-804-9234 | sit.amet.metus@orcilacus.net                          |        6 |
-| 1-804-978-1220 | tincidunt.nibh.Phasellus@Inscelerisquescelerisque.net |        3 |
-| 1-879-333-2531 | ultrices.sit@arcu.co.uk                               |        7 |
-| 1-856-300-4636 | ultricies.adipiscing@cursusluctusipsum.co.uk          |        5 |
-| 1-217-977-2013 | ut@Integersemelit.org                                 |        1 |
-| 1-820-218-8512 | vitae@tinciduntpede.com                               |        1 |
-+----------------+-------------------------------------------------------+----------+
-60 rows in set (0.02 sec)
 
+
+mysql> SELECT Account.email, Phone.content, COUNT(*) FROM Account
+    -> JOIN AddressBook ON AddressBook.accountId = Account.id
+    -> JOIN Entry ON Entry.addressBookId = AddressBook.id
+    -> JOIN Phone ON Phone.entryId = Entry.id
+    -> WHERE Phone.content LIKE ("%-%-%-%")
+    -> GROUP BY Account.email
+    -> ORDER BY COUNT(*);
++-------------------------------------------------------+----------------+----------+
+| email                                                 | content        | COUNT(*) |
++-------------------------------------------------------+----------------+----------+
+| ante@nulla.edu                                        | 1-534-780-0705 |        1 |
+| Donec.vitae@Phasellusornare.org                       | 1-830-179-3094 |        1 |
+| orci.consectetuer.euismod@lacinia.com                 | 1-569-464-7758 |        1 |
+| bibendum@orciUtsemper.com                             | 1-835-432-1108 |        1 |
+| ipsum.non@Nullaeu.net                                 | 1-200-915-5809 |        1 |
+| libero.lacus.varius@gravidaAliquamtincidunt.com       | 1-391-754-0615 |        1 |
+| consectetuer.rhoncus@pedeacurna.net                   | 1-687-372-5982 |        1 |
+| dapibus.quam@interdumligulaeu.ca                      | 1-795-477-6585 |        1 |
+| magna.Sed.eu@duiSuspendisseac.edu                     | 1-230-850-6706 |        1 |
+| ut@Integersemelit.org                                 | 1-217-977-2013 |        1 |
+| vitae@tinciduntpede.com                               | 1-820-218-8512 |        1 |
+| nec.ligula@sedtortorInteger.com                       | 1-716-957-3905 |        1 |
+| eu.metus@atlibero.co.uk                               | 1-413-597-6316 |        1 |
+| adipiscing.fringilla.porttitor@Quisqueac.edu          | 1-153-744-4476 |        1 |
+| non.justo.Proin@variuset.edu                          | 1-765-240-6001 |        1 |
+| nulla.vulputate@Nullamscelerisque.co.uk               | 1-941-735-6014 |        2 |
+| aptent@nequesedsem.edu                                | 1-778-730-0178 |        2 |
+| Duis.ac.arcu@ascelerisque.co.uk                       | 1-355-658-9356 |        2 |
+| porta@Vivamus.com                                     | 1-588-524-1323 |        2 |
+| Nunc.pulvinar.arcu@vel.ca                             | 1-100-591-6153 |        2 |
+| semper.egestas.urna@ipsumSuspendissesagittis.ca       | 1-873-432-9306 |        2 |
+| Phasellus.vitae@diamat.com                            | 1-831-382-0649 |        2 |
+| lorem@apurusDuis.edu                                  | 1-206-495-1425 |        2 |
+| diam.luctus.lobortis@ipsumac.ca                       | 1-217-683-0322 |        2 |
+| magna.Praesent@Lorem.ca                               | 1-649-149-4033 |        2 |
+| dignissim.lacus@vel.ca                                | 1-585-936-6793 |        2 |
+| Ut.sagittis.lobortis@semperduilectus.net              | 1-877-158-1811 |        2 |
+| mauris@placeratCrasdictum.net                         | 1-156-757-3429 |        2 |
+| non@eget.com                                          | 1-433-115-6363 |        2 |
+| Morbi.neque@erat.org                                  | 1-781-983-4034 |        3 |
+| lobortis@elementumpurus.co.uk                         | 1-440-731-0304 |        3 |
+| Praesent@miDuis.net                                   | 1-230-221-1403 |        3 |
+| tincidunt.nibh.Phasellus@Inscelerisquescelerisque.net | 1-804-978-1220 |        3 |
+| Quisque@Donec.net                                     | 1-581-724-8616 |        3 |
+| egestas.Fusce.aliquet@nec.edu                         | 1-826-300-6188 |        3 |
+| Vestibulum.ante.ipsum@egestasblanditNam.net           | 1-507-991-8513 |        3 |
+| est.ac@etmalesuadafames.ca                            | 1-213-934-5487 |        3 |
+| eu@Crasvulputatevelit.com                             | 1-340-435-0028 |        3 |
+| facilisis.non@vulputateullamcorpermagna.ca            | 1-351-618-2388 |        3 |
+| iaculis.nec@magnaCrasconvallis.co.uk                  | 1-512-707-6897 |        4 |
+| ipsum.Donec@tellus.ca                                 | 1-257-867-0566 |        4 |
+| et.ipsum.cursus@euaugue.com                           | 1-854-220-8547 |        4 |
+| Vivamus.molestie@Infaucibus.org                       | 1-742-993-2400 |        4 |
+| neque.vitae@enimcommodohendrerit.net                  | 1-811-990-2618 |        4 |
+| quam.dignissim.pharetra@sed.co.uk                     | 1-587-303-6203 |        5 |
+| blandit@nec.com                                       | 1-254-219-1949 |        5 |
+| leo@temporloremeget.co.uk                             | 1-258-765-9937 |        5 |
+| Proin.nisl@arcuMorbisit.net                           | 1-516-476-2302 |        5 |
+| ultricies.adipiscing@cursusluctusipsum.co.uk          | 1-856-300-4636 |        5 |
+| commodo@tincidunt.co.uk                               | 1-707-888-2787 |        6 |
+| sit.amet.metus@orcilacus.net                          | 1-494-804-9234 |        6 |
+| Suspendisse.non@nullavulputatedui.ca                  | 1-164-741-1817 |        6 |
+| ridiculus.mus@euismod.net                             | 1-665-685-5382 |        7 |
+| ultrices.sit@arcu.co.uk                               | 1-879-333-2531 |        7 |
+| natoque@perinceptoshymenaeos.net                      | 1-653-553-6385 |        7 |
+| inceptos@dictummagna.org                              | 1-425-733-8123 |        8 |
+| Nam.consequat.dolor@nondapibusrutrum.ca               | 1-579-683-7011 |        8 |
+| adipiscing@Sedetlibero.ca                             | 1-130-457-3860 |        8 |
+| consectetuer.rhoncus.Nullam@temporloremeget.org       | 1-712-873-5099 |        9 |
+| Vivamus.euismod.urna@anteNunc.net                     | 1-200-560-7225 |       10 |
++-------------------------------------------------------+----------------+----------+
+60 rows in set (0.02 sec)
